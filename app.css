@@ -1,0 +1,153 @@
+:root {
+    /* Primary */
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--Very-light-gray);
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--Very-light-gray);
+    max-width: 375px;
+    margin: 0 auto;
+    /* font */
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--Transparent-white);
+    border-radius: 5px;
+}
+
+body h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--Very-light-gray);
+}
+
+p {}
+
+button {
+    background-color: var(--Very-light-gray);
+    padding: 10px;
+    width: 125px;
+    border-radius: 20px;
+    border: none;
+}
+
+img {
+    max-width: 50px;
+    max-width: ;
+}
+
+#sedan {
+    background-color: var(--Bright-orange);
+}
+
+#sedan button {
+    color: var(--Bright-orange);
+}
+
+
+#suv {
+    background-color: var(--Dark-cyan);
+}
+
+#suv button {
+    color: var(--Dark-cyan);
+}
+
+#luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+#luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+.outsideWrapper {
+    display: flex;
+}
+
+.insideWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 25px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: black;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 799px) {
+    * {
+        transition: .1s ease;
+    }
+
+    .outsideWrapper#sedan {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .outsideWrapper#luxury {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    * {
+        transition: .1s ease;
+    }
+
+    body {
+        min-width: 800px;
+        margin: 0px auto;
+    }
+
+    p {
+        margin-bottom: 60px;
+    }
+
+    .outsideWrapper {
+        max-width: 355px;
+    }
+
+    .contentWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .outsideWrapper#sedan {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .outsideWrapper#luxury {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+}
